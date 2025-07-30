@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+    margin: 0;
+}
+
+.input-area {
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    display: flex;
+    /* フレックスボックスを使用
+    その直下の子要素をいじる */
+    flex-direction: column;
+    /* 垂直方向に配置 */
+    align-items: center;
+    /* 垂直方向に中央揃え */
+    justify-content: center;
+    /* 水平方向に中央揃え */
+}
+
+.input-area label {
+    display: flex;
+    flex-wrap: wrap;
+    /* 自動的に改行する */
+    align-items: center;
+    /* 中央揃え */
+}
+
+.input-area input[type="number"] {
+    margin: 0 0.5rem;
+}
+
+/* 入力フィールドの左右にマージンを追加 */
+
+input[type="number"] {
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+button {
+    font-size: 2em;
+    padding: 20px 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#output {
+    color: black;
+    margin-top: -20px;
+    padding-top: 0px;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12vw;
+    /* ビューポート幅の10%を基準にフォントサイズを設定 */
+}
+
+@media screen and (max-width: 600px) {
+    #output {
+        font-size: 10vw;
+        /* 小さい画面ではさらに小さくする */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #output {
+        font-size: 8vw;
+        /* さらに小さい画面ではもっと小さくする */
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
